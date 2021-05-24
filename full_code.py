@@ -28,7 +28,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
 # поиск и выделение границ листа А4
-edged = cv2.Canny(gray, 20, 20)
+edged = cv2.Canny(gray, 40, 40)
 edged = cv2.dilate(edged, None, iterations=1)
 edged = cv2.erode(edged, None, iterations=1)
 
