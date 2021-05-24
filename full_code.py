@@ -27,7 +27,7 @@ image = cv2.resize(image,None,fx=0.5, fy=0.5, interpolation = cv2.INTER_CUBIC)
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 gray = cv2.GaussianBlur(gray, (7, 7), 0)
 
-# поиск и выделение границ листа А4
+# поиск и выделение границ листа бумаги
 edged = cv2.Canny(gray, 40, 40)
 edged = cv2.dilate(edged, None, iterations=1)
 edged = cv2.erode(edged, None, iterations=1)
